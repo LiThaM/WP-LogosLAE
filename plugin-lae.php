@@ -3,7 +3,7 @@
 Plugin Name: Recolector de banners de Loterías y Apuestas del Estado
 Plugin URI: https://github.com/LiThaM/WP-LogosLAE
 Description: Este plugin captura las URLs de los banners de Loterías y Apuestas del Estado en tu sitio web.
-Version: 1.2.0
+Version: 1.2.1
 Author: Alejandro
 Author URI: https://github.com/LiThaM
 License: GPL2
@@ -36,12 +36,15 @@ function obtener_banners() {
     $banner_urls = [];
     for ($i = 1; $i <= 4; $i++) {
         $img_element = $dom->find('#item-banner-' . $i, 0);
-
         if ($img_element) {
-            $url = $img_element->find('img', 0)->getAttribute('data-src-pc');
+            $url = $img_element->find('a', 0)->getAttribute('href');
+            $urlImage = $img_element->find('img', 0)->getAttribute('data-src-pc');
 
             if ($url) {
-                $banner_urls[] = 'https://www.loteriasyapuestas.es' . $url;
+                $banner_urls[] = array(
+                    "img" => 'https://www.loteriasyapuestas.es' . $urlImage,
+                    "url" => $url,
+                );
             }
         }
     }
@@ -67,7 +70,7 @@ function mostrar_banners() {
     $html = '<div class="slick-slider">';
 
     foreach ($banners as $banner) {
-        $html .= '<img src="' . esc_url($banner) . '" />';
+        $html .= '<a href="' . esc_url($banner["url"]) . '"><img src="' . esc_url($banner["img"]) . '" /></a>';
     }
 
     $html .= '</div>';
