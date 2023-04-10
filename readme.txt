@@ -1,23 +1,15 @@
-=== Recolector de banners de Loterías y Apuestas del Estado ===
-Contributors: Alejandro
-Tags: banners, loterías, apuestas, carrusel
-Requires at least: 4.0.0
-Tested up to: 5.9
-Stable tag: 1.0.0
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+#Recolector de banners de Loterías y Apuestas del Estado
+Este plugin para WordPress permite capturar y mostrar los banners de Loterías y Apuestas del Estado en tu sitio web. El plugin utiliza Slick Slider para mostrar los banners en un carrusel.
 
-Este plugin captura las URLs de los banners de Loterías y Apuestas del Estado en tu sitio web y los muestra en un carrusel con Slick Slider.
-
-== Descripción ==
-Este plugin captura las URLs de los banners de Loterías y Apuestas del Estado en tu sitio web y los muestra en un carrusel con Slick Slider. Simplemente inserta el shortcode [banners_lae] en cualquier página o entrada para mostrar el carrusel de banners.
-
-== Instalación ==
-1. Descarga el plugin desde el repositorio de WordPress o desde GitHub.
-2. Descomprime el archivo y carga la carpeta "recolector-banners-lae" en el directorio "/wp-content/plugins/" de tu sitio web.
-3. Activa el plugin desde el panel de administración de WordPress.
-4. Inserta el shortcode [banners_lae] en cualquier página o entrada para mostrar el carrusel de banners.
-
-== Changelog ==
-= 1.0.0 =
-* Versión inicial del plugin.
+Características
+Obtención de las URLs de los banners de Loterías y Apuestas del Estado.
+Mostrar los banners en un carrusel utilizando Slick Slider.
+Agrega el shortcode [banners_lae] para mostrar los banners.
+Últimas mejoras
+Versión 1.2.0:
+Se agregó un mensaje de error cuando no se pueden obtener los banners de Loterías y Apuestas del Estado.
+Se agregó un mensaje cuando no se encontraron banners.
+Se agregaron archivos CSS y JS de Slick Slider.
+Se mejoró la integración con Slick Slider.
+Se agregó la constante de versión del plugin.
+Se corrigieron errores menores en el código.
