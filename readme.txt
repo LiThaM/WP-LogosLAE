@@ -1,4 +1,4 @@
-#Recolector de banners de Loterías y Apuestas del Estado
+## Recolector de banners de Loterías y Apuestas del Estado
 Este plugin para WordPress permite capturar y mostrar los banners de Loterías y Apuestas del Estado en tu sitio web. El plugin utiliza Slick Slider para mostrar los banners en un carrusel.
 
 Características
